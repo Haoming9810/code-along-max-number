@@ -1,13 +1,11 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class ProblemTest {
-
-    // Example test
-    // DO NOT CHANGE
     @Test
-    public void testBinarySearch() {
+    public void testFindMaxNumber() {
         int[][] inputs = {
                 {},
                 {3},
@@ -23,11 +21,16 @@ public class ProblemTest {
 
         assertEquals(inputs.length, answer.length);
 
-        for (int i=0; i<inputs.length; i++) {
+        for (int i = 0; i < inputs.length; i++) {
             int actual = Problem.findMax(inputs[i]);
 
             int expected = answer[i];
-            assertEquals(expected, actual);
+            try {
+                assertEquals(expected, actual);
+            } catch (AssertionError e) {
+                System.out.println("test case " + i + " failed: " + e);
+                Assert.fail();
+            }
         }
     }
 }

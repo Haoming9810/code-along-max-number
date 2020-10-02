@@ -4,10 +4,9 @@ public class Problem {
             return -1;
         }
 
-        int maxVal = input[0], maxIdx = 0;
-        for (int i = 0; i < input.length; i++) {
-            if (maxVal < input[i]) {
-                maxVal = input[i];
+        int maxIdx = 0;
+        for (int i = 1; i < input.length; i++) {
+            if (input[maxIdx] < input[i]) {
                 maxIdx = i;
             }
         }
