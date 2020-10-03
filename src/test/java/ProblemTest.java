@@ -9,7 +9,7 @@ public class ProblemTest {
         int actual = Problem.findMax(input1);
         assertEquals(4, actual);
 
-        int[] input2 = {-9, -2, -1, 7};
+        int[] input2 = {-9, -2, -1, -7};
         actual = Problem.findMax(input2);
         assertEquals(2, actual);
 
